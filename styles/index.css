@@ -342,6 +342,9 @@ header .active span:nth-child(3) {
   }
 }
 .projects .allprojects {
+  border-radius: 13px;
+  border: none;
+  width: 100%;
   height: 310px;
   background: rgb(2, 2, 2);
   cursor: pointer;
@@ -352,14 +355,58 @@ header .active span:nth-child(3) {
     width: 100%;
   }
 }
+.projects .allprojects:hover span,
+.projects .allprojects span:hover {
+  visibility: visible;
+  transform: translateY(0);
+}
 .projects .allprojects :nth-child(2) {
+  border-radius: 13px;
   width: 100%;
   height: 100%;
+  transition: 0.3s ease-out;
+}
+.projects .allprojects :nth-child(2):hover,
+.projects .allprojects :nth-child(2) .infos_display:hover {
+  transform: scale(1.04);
+  filter: opacity(15%) contrast(150%);
 }
 .projects .allprojects :nth-child(2) img {
   width: 100%;
   height: 100%;
   border: 3px solid white;
+  transition: 0.2s ease-out;
+}
+.projects .allprojects .span_display {
+  perspective: 1000px;
+  position: relative;
+}
+.projects .allprojects .infos_display {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  line-height: 34px;
+  visibility: hidden;
+  transition: 0.4s ease-out;
+  transform: translateZ(200px);
+}
+.projects .allprojects .infos_display h3 {
+  font-size: clamp(17px, 5vw, 25px);
+  color: #A1528C;
+  transform: scaleX(0);
+  animation: titleAnime 1.5s ease forwards;
+  transform-origin: 150%;
+}
+@keyframes titleAnime {
+  to {
+    transform: scaleX(1);
+  }
+}
+.projects .allprojects .infos_display p {
+  font-size: clamp(9px, 3vw, 20px);
 }
 .projects .hero_projects {
   display: flex;
@@ -430,6 +477,7 @@ header .active span:nth-child(3) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 .skills .comp h1 {
   font-size: clam(15px, 20vw, 20px);
@@ -476,7 +524,8 @@ header .active span:nth-child(3) {
   color: #a82828;
   width: 100%;
   border-radius: 10px;
-  background: #eae6e6;
+  background: #463d3d;
+  box-shadow: 13px 12px 22px rgba(11, 9, 9, 0.6);
   height: 200px;
   transition: 0.2s ease-out;
 }
@@ -487,18 +536,318 @@ header .active span:nth-child(3) {
 }
 .skills .comp .front ul li:hover,
 .skills .comp .Outils ul li:hover {
-  transform: translateY(12px);
+  transform: translateZ(2px);
   transition: 0.4s ease-out;
 }
 
-.certificates {
-  width: 100vw;
-  height: 100vh;
+.Formations {
+  text-align: center;
+  position: relative;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #A1528C;
+  padding: 80px 15px 48px;
+}
+.Formations_infos {
+  position: relative;
+  padding: 63px 0;
+  padding-bottom: 63px;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+  z-index: 1;
+}
+.Formations_infos::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 4px);
+  width: 8px;
+  height: 100%;
+  top: 0;
+  background-color: #ffffff;
+  z-index: -1;
+}
+.Formations_infos strong {
+  color: #383838;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  display: block;
+  white-space: nowrap;
+}
+.Formations_infos p {
+  z-index: 3;
+  font-size: 20px;
+  color: rgb(2, 2, 2);
+}
+.Formations .parcours {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+.Formations .parcours::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 550px;
+  height: 8px;
+  background-color: #ffffff;
+  z-index: 100;
+}
+.Formations_dev {
+  width: 50%;
+  margin: 0 15px;
+  max-width: 550px;
+}
+.Formations_dev .Formations_dev-languages {
+  position: relative;
+  padding: 63px 0;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+  color: #05030c;
+}
+.Formations_dev .Formations_dev-languages::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 4px);
+  width: 8px;
+  height: 100%;
+  top: 0;
+  background-color: #383838;
+}
+.Formations_dev .Formations_dev-languages-html {
+  position: relative;
+  max-width: 300px;
+  border-radius: 2px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #383838;
+  font-size: 14px;
+  line-height: 1.8;
+  background-color: #fff;
+}
+.Formations_dev .Formations_dev-languages-html img {
+  width: 100%;
+  max-width: 42px;
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Formations_dev .Formations_dev-languages-css {
+  position: relative;
+  max-width: 300px;
+  border-radius: 2px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #383838;
+  font-size: 14px;
+  line-height: 1.8;
+  background-color: #fff;
+}
+.Formations_dev .Formations_dev-languages-css img {
+  width: 100%;
+  max-width: 42px;
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Formations_dev .Formations_dev-languages-framw {
+  position: relative;
+  max-width: 300px;
+  border-radius: 2px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #383838;
+  font-size: 14px;
+  line-height: 1.8;
+  z-index: 1;
+}
+.Formations_dev .Formations_dev-languages-framw::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 4px);
+  width: 8px;
+  height: 100%;
+  top: 0;
+  background-color: #ffffff;
+  z-index: -1;
+  opacity: 0.3;
+}
+.Formations_dev .Formations_dev-languages-framw h3 {
+  color: #0f2133;
+  padding: 12px;
+  z-index: 3;
+}
+.Formations_frameworkcss {
+  display: flex;
+  justify-content: space-between;
+}
+.Formations_frameworkcss .Formations_framework-sass {
+  position: relative;
+  padding: 20px 0 80 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #383838;
+  width: 50%;
+}
+.Formations_frameworkcss .Formations_framework-sass::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #ffffff;
+  opacity: 0.4;
+  height: 8px;
+  transition: bottom 0.3s;
+}
+.Formations_frameworkcss .Formations_framework-sass img {
+  width: 100%;
+  max-width: 80px;
+}
+.Formations_frameworkcss .Formations_framework-sass h3 {
+  color: #ffffff;
+  padding: 12px;
+}
+.Formations_frameworkcss .Formations_framework-sass ul li {
+  color: #ffffff;
+}
+.Formations_frameworkcss .Formations_framework-twd {
+  position: relative;
+  padding: 20px 0 80 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #000;
+  width: 50%;
+}
+.Formations_frameworkcss .Formations_framework-twd::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #ffffff;
+  opacity: 0.4;
+  height: 8px;
+  transition: bottom 0.3s;
+}
+.Formations_frameworkcss .Formations_framework-twd img {
+  width: 100%;
+  max-width: 80px;
+}
+.Formations_framework {
+  width: 50%;
+  max-width: 540px;
+  margin: 0 15px;
+}
+.Formations_framework-frw {
+  position: relative;
+  padding: 63px 0;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+  color: #05030c;
+}
+.Formations_framework-frw::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 4px);
+  width: 8px;
+  height: 100%;
+  top: 0;
+  background-color: #383838;
+}
+.Formations_framework-react {
+  position: relative;
+  max-width: 300px;
+  border-radius: 2px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #383838;
+  font-size: 14px;
+  line-height: 1.8;
+  background-color: #fff;
+}
+.Formations_framework-react img {
+  width: 100%;
+  max-width: 42px;
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Formations_framework-react img {
+  width: 100%;
+  max-width: 53px;
+}
+.Formations .separateur {
+  position: relative;
+  width: 9px;
+  height: 68px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  max-width: 550px;
 }
 
 .contact {
   width: 100vw;
   height: 100vh;
   background: #383838;
+}
+
+footer {
+  background: #000;
+  width: 100%;
+  height: 10%;
+  position: relative;
+}
+
+.social-network {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 20%;
+  font-size: 1.7rem;
+}
+@media screen and (max-width: 650px) {
+  .social-network {
+    width: 30%;
+  }
+}
+.social-network ul {
+  display: flex;
+  width: 100%;
+  min-width: 100px;
+  justify-content: space-around;
+}
+@media screen and (max-width: 450px) {
+  .social-network ul {
+    min-width: 100%;
+  }
+}
+.social-network ul a {
+  padding: 1rem;
+  transition: 1.1s ease-out;
+}
+.social-network ul li {
+  color: #ffffff;
 }/*# sourceMappingURL=index.css.map */

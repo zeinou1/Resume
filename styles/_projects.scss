@@ -15,7 +15,9 @@
   }
 
   .allprojects {
-    // width: 620px;
+    border-radius: 13px;
+    border: none;
+    width: 100%;
     height: 310px;
     background: $black;
     cursor: pointer;
@@ -23,14 +25,58 @@
     @media (max-width: 750px) {
       width: 100%;
     }
+    &:hover span,
+    span:hover {
+      visibility: visible;
+      transform: translateY(0);
+    }
     :nth-child(2) {
+      border-radius: 13px;
       width: 100%;
       height: 100%;
-
+      transition: 0.3s ease-out;
+      &:hover,
+      .infos_display:hover  {
+        transform: scale(1.04);
+        filter: opacity(15%) contrast(150%);
+      }
       img {
         width: 100%;
         height: 100%;
         border: 3px solid white;
+        transition: 0.2s ease-out;
+      }
+    }
+    .span_display {
+      perspective: 1000px;
+      position: relative;
+    }
+    .infos_display {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      margin: 0 auto;
+      line-height: 34px;
+      visibility: hidden;
+      transition: 0.4s ease-out;
+      transform: translateZ(200px);
+
+      h3 {
+        font-size: clamp(17px, 5vw, 25px);
+        color: $color-5;
+        transform: scaleX(0);
+        animation: titleAnime 1.5s ease forwards;
+        transform-origin: 150%;
+        @keyframes titleAnime {
+          to {
+            transform: scaleX(1);
+          }
+        }
+      }
+      p{
+        font-size: clamp(9px, 3vw, 20px);
       }
     }
   }
@@ -54,7 +100,6 @@
     }
   }
 
-
   .modal {
     position: fixed;
     inset: 0;
@@ -62,26 +107,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
- 
   }
   .modal.active {
     display: flex;
   }
 
   .modal-content {
-    
     width: 700px;
     padding: 30px;
     position: relative;
     background-color: rgb(200, 193, 193);
     margin-bottom: 10vw;
     border-radius: 5px;
-    img{
-        width: 500px;
-        height: 200px;
+    img {
+      width: 500px;
+      height: 200px;
     }
   }
-  .close{
+  .close {
     position: absolute;
     padding: 4px 6px;
     font-size: 15px;

@@ -8,13 +8,27 @@ const project = () => {
     const divProjects = document.createElement("div");
     divProjects.className = "allprojects modal-toggle";
 
+    const displayInfos = document.createElement("span");
+     const displayAllP = document.createElement("div");
+
+     // Gestion du projet niveau
     divProjects.innerHTML = `
-      <h3>${data.title}</h3>
-      <div><img src="${data.img}"/></div>
+    
+    <span class="infos_display">
+      <h3> ${data.title}</h3>
+      <p>
+      ${data.infos}
+      </p>
+    </span>
+    <img src="${data.img}" alt=${data.title}/>
+
+
     `;
 
     Mesprojects.appendChild(divProjects);
     section.appendChild(Mesprojects);
+    
+    displayInfos.className = "infos_display";
   }
 
   const allProjects = document.querySelectorAll(".allprojects");
@@ -34,14 +48,15 @@ const displayModal = (projectData) => {
       <span class="close">&times;</span>
       <div class="img-modal">
       ${projectData.images
-      .map(
-        (image) =>
-          `
+        .map(
+          (image) =>
+            `
+        
          <img src='${image}' alt = ""
          <img src="${image}" alt = "project image" />
          `
-      )
-      .join("")}
+        )
+        .join("")}
 
 
       </div>
@@ -51,14 +66,13 @@ const displayModal = (projectData) => {
        </div>
       <div class="modal-competences">
          <ul>
-        ${
-          projectData.competences.map((cmp) => {
-        return `<li>${cmp}</li>`;
-      }).join("")}
+        ${projectData.competences
+          .map((cmp) => {
+            return `<li>${cmp}</li>`;
+          })
+          .join("")}
         </ul>
       </div>
-
-          
       </div>
       <div>
       <button><a href=${projectData.link} target='blank'>Voir le site</a></button>

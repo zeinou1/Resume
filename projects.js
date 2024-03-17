@@ -66,7 +66,7 @@ const displayModal = (projectData) => {
        </div>
       <div class="modal-competences">
          <ul>
-        ${projectData.competences
+        ${projectData.languages
           .map((cmp) => {
             return `<li>${cmp}</li>`;
           })
@@ -75,7 +75,12 @@ const displayModal = (projectData) => {
       </div>
       </div>
       <div>
-      <button><a href=${projectData.link} target='blank'>Voir le site</a></button>
+       ${
+
+        projectData.link ? `  <button><a href=${projectData.link} target='blank'>Voir le site</a></button>` : ""
+       }
+
+
       <button><a href="">Voir le code</a></button>
       </div>
 

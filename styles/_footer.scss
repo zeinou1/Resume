@@ -1,37 +1,78 @@
 footer {
   background: #000;
   width: 100%;
-  height: 10%;
+  display: flex;
   position: relative;
-}
+  justify-content: space-between;
+  padding: 3rem;
+  z-index: -1;
+  @media only screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+  @media only screen and (min-width: 704px) and (max-width: 1024px) {
+  }
 
-.social-network {
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
+  .social-network {
     width: 20%;
     font-size: 1.7rem;
-  
-    @media screen and (max-width: 650px){
-      width: 30%;
-    }
-  
+
     ul {
       display: flex;
       width: 100%;
-      min-width: 100px;
-      justify-content: space-around;
-  
-      @media screen and (max-width: 450px){
-        min-width: 100%;
-      }
-  
+      // min-width: 30px;
+      justify-content: space-between;
+
       a {
         padding: 1rem;
         transition: 1.1s ease-out;
       }
-      li{
+      li {
         color: $color-1;
       }
     }
   }
+  // contact
+  .contact-infos {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  gap: 1rem;
+    padding: 0 5rem;
+    @media only screen and (max-width: 700px) {
+      flex-direction: column;
+      padding: 0;
+    }
+    @media only screen and (min-width: 704px) and (max-width: 1024px) {
+    }
+
+    h4 {
+      color: $color-1;
+      font-size: clamp(4px, 4vw, 20px);
+      font-weight: 100;
+
+     
+    }
+
+    .address {
+      width: 320px;
+      margin: 0 auto;
+      .content {
+        width: 100%;
+
+        @media only screen and (max-width: 700px) {
+          display: flex !important;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+        @media only screen and (min-width: 704px) and (max-width: 1024px) {
+        }
+      }
+    }
+    .phone {
+      position: relative;
+    }
+    .email {
+    }
+  }
+}

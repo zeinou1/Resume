@@ -23,15 +23,27 @@
         <span></span>
       </div>
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Services</li>
-        <li class="list">Contact</li>
+        <li>
+          <a href="#hero">Accueil</a>
+        </li>
+        <li>
+          <a href="#ap">Apropos</a>
+        </li>
+        <li>
+          <a href="#skills">Compétences</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#formations">formation</a>
+        </li>
       </ul>
+     
     </nav>
   </header>
   <div class="cursor-perso"></div>
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="profil">
       <img src="./images/moi.png" alt="" class="hero_profil_picture">
     </div>
@@ -56,12 +68,12 @@
 
   <main class="content">
     <!-- Compétences -->
-    <section class="skills">
+    <section class="skills" id="skills">
       <h2> Compétences</h2>
       <div class="comp">
-
+      
         <div>
-          <h2>Front-end</h2>
+          <h3>Front-end</h3>
           <div class="front">
             <ul>
               <li class="lang">
@@ -117,7 +129,7 @@
         </div>
 
         <div>
-          <h2>Outils</h2>
+          <h3>Outils</h3>
           <div class="Outils">
             <ul>
 
@@ -156,7 +168,7 @@
       </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
       <h2>projects</h2>
       <div class="container_project">
 
@@ -164,7 +176,7 @@
     </section>
 
     <!-- Formations -->
-    <section class="Formations" id="Formation">
+    <section class="Formations" id="formations">
       <h2>Formation</h2>
       <p>OpenClassrooms</p>
       <div class="Formations_infos">
@@ -218,7 +230,7 @@
             <ul>
               <li>Configurer la navigation entre les pages de l'application avec React Router </li>
               <li>Développer des éléments de l'interface d'un site web grâce à des composants React</li>
-            
+
               <li>Initialiser une application avec Create React App</li>
 
             </ul>
@@ -252,7 +264,7 @@
           <div class="Formations_framework-frw">
 
 
-            <h2>Autres techniques</h2>
+            <h2>Autres compétences</h2>
           </div>
           <div class="Formations_framework-react">
             <h3>Compétences </h3>
@@ -327,6 +339,43 @@
         </a>
       </ul>
     </div>
+
+
+    <div class="contact-infos">
+      <div class="address">
+        <div class="content">
+
+          <h4>adresse</h4>
+          <p>5 Allée gerges Plitzer</p>
+          <p>92000 Nanterre</p>
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="content">
+          <h4>Téléphone</h4>
+
+          </p>
+          0768638529
+          </p>
+
+        </div>
+      </div>
+      <div class="email">
+        <div class="content">
+          <h4>Email</h4>
+
+          <a href="mailto:zarikader@gmail.com">Contact moi Ici</a>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
   </footer>
   <script src="index.js"></script>
   <script type="module" src="projects.js"></script>

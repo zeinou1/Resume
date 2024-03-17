@@ -23,7 +23,7 @@ export const projectsData = [
     languages: ["Html", "Css","Sass"],
     infos: "Ohmyfood est un site de restauration rapide, qui permet de faire de réservation en ligne et de composer le menu de leur repas",
 
-    img: "../images/img-projects/Ohmy1.png",
+    img: "./images/img-projects/Ohmy1.png",
     link: "https://zeinou1.github.io/ohmyfood_4/",
     code:"https://github.com/zeinou1/ohmyfood_4",
     images: ["./images/img-projects/Ohmy2.png", "./images/img-projects/Ohmy1.png"],

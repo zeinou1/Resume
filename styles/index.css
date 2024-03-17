@@ -472,6 +472,11 @@ nav .active span:nth-child(3) {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 700px) {
+  .projects .modal {
+    margin: 21px;
+  }
+}
 .projects .modal.active {
   display: flex;
 }
@@ -489,8 +494,8 @@ nav .active span:nth-child(3) {
      object-fit: cover;
   width: 100%;
   max-width: 500px;
-  height: 200px;
-  padding: 1rem;
+  height: 170px;
+  padding: 0.5rem;
 }
 @media only screen and (max-width: 700px) {
   .projects .modal-content {
@@ -500,16 +505,26 @@ nav .active span:nth-child(3) {
 .projects .modal-content .img-modal {
   display: flex !important;
 }
+@media only screen and (max-width: 700px) {
+  .projects .modal-content .img-modal {
+    justify-content: center;
+  }
+  .projects .modal-content .img-modal img {
+    width: 100%;
+    max-width: 149px;
+  }
+}
 .projects .modal-content .modal-info {
   display: flex !important;
   width: 100%;
 }
 .projects .modal-content .modal-info > div {
   width: 50%;
-  padding: 1rem;
+  padding: 0.5rem;
   height: 100%;
+  overflow: hidden;
   border: 1px solid #ffffff;
-  margin: 1rem;
+  margin: 0.5rem;
   background: #0f2133;
 }
 .projects .modal-content button {
@@ -522,11 +537,13 @@ nav .active span:nth-child(3) {
 .projects .close {
   position: absolute;
   cursor: pointer;
-  right: -2px;
-  top: -14px;
+  right: 14px;
+  top: -74px;
   border: none;
-  font-size: 28px;
+  font-size: 58px;
   color: red;
+  width: 23px;
+  height: 23px;
 }
 
 .skills {
@@ -943,7 +960,6 @@ nav .active span:nth-child(3) {
 footer {
   background: #000;
   width: 100%;
-  display: flex;
   position: relative;
   justify-content: space-between;
   padding: 1rem;

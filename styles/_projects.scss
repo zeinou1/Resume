@@ -121,6 +121,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media only screen and (max-width: 700px) {
+      margin: 21px;
+    }
+    @media only screen and (min-width: 704px) and (max-width: 1024px) {
+    }
   }
   .modal.active {
     display: flex;
@@ -138,8 +143,9 @@
       object-fit: cover;
       width: 100%;
       max-width: 500px;
-      height: 200px;
-      padding: 1rem;
+      height: 170px;
+      padding: 0.5rem;
+    
       @media only screen and (max-width: 700px) {
       }
       @media only screen and (min-width: 704px) and (max-width: 1024px) {
@@ -153,6 +159,19 @@
     }
     .img-modal {
       display: flex !important;
+     
+      @media only screen and (max-width: 700px) {
+        justify-content: center;;
+      img{
+        width: 100%;
+        max-width: 149px;
+   
+      
+      }
+      }
+     
+      @media only screen and (min-width: 704px) and (max-width: 1024px) {
+      }
     }
     .modal-info {
       display: flex !important;
@@ -160,11 +179,11 @@
       
       & > div {
         width: 50%;
-        padding: 1rem;
+        padding: 0.5rem;
         height: 100%;
-     
+        overflow: hidden;
         border: 1px solid $color-1;
-        margin: 1rem;
+        margin: 0.5rem;
         background: $color-3;
       }
     }
@@ -180,11 +199,14 @@
     position: absolute;
     // padding: 4px 6px;
     cursor: pointer;
-    right: -2px;
-    top: -14px;
+    right: 14px;
+    top: -74px;
     border: none;
-    font-size: 28px;
+    font-size: 58px;
     color: red;
+    width: 23px;
+    height: 23px;
+  
   }
 }
 

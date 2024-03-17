@@ -81,7 +81,7 @@ const displayModal = (projectData) => {
        }
 
 
-      <button><a href="">Voir le code</a></button>
+      <button><a href=${projectData.code}>Voir le code</a></button>
       </div>
 
     </div>

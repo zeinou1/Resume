@@ -1,22 +1,24 @@
 
-header{
-  position: relative;
-  z-index: 3;
-#side-bar {
-    position: fixed;
+nav{
+
+#side-bar{
+  border-right: 3px solid blueviolet;
+}  
+  .nav {
+    position: fixed ;
     width: 270px;
-    height: 100%;
-    background: #a0b8b1;
+    height: 100vh;
+    background: $color-1;
     top: 0;
-    left: -280px;
+    left: -270px;
     transition: 0.5s ease-out;
     z-index: 4;
-   
+  
   }
   .toggle-btn {
     position: absolute;
     top: 30px;
-    left: 289px;
+    left: 278px;
     cursor: pointer;
     height: 50px;
     width: 50px;
@@ -25,53 +27,60 @@ header{
     width: 60px;
     height: 10px;
     border-radius: 5px;
-    background: #3cd708;
+    background: $color-5;
     display: block;
     margin-top: 4px;
     transition: 0.3s ease;
     @media only screen and (max-width: 700px) {
       width: 30px;
       height: 3px;
-      }
-      @media only screen and (min-width: 704px) and (max-width: 1024px) {
-   
-      }
+    }
+    @media only screen and (min-width: 704px) and (max-width: 1024px) {
+    }
   }
   li {
     color: #292929;
     list-style: none;
-    font-size: clamp(13px, 3vw,25px);
+    font-size: clamp(13px, 3vw, 20px);
     cursor: pointer;
     padding: 13px;
     color: $color-1;
     text-transform: capitalize;
+    a{
+      color: $color-4;
+      text-decoration: none;
+    
+    }
+    a:hover {
+      color: $color-1;}
   }
   li:hover {
-    background: #292929;
-    color: #fcfcfb;
+    background: $color-4;
+   
   }
-  #side-bar.active {
+
+  .nav.active {
     left: 0;
   }
   
-  /* rotate en hambergur span */
+ 
   
   .active span {
     position: absolute;
-  
   }
-  /* enième enfant nth-child */
+
   .active span:nth-child(1) {
     transform: rotate(-45deg);
   }
   .active span:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
   }
   .active span:nth-child(3) {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
   }
-  // .active ~ .content {
-  //   opacity: 0.2;
-  //   }
-
+  .active ~ content{
+    opacity: 0.3;
   }
+  
+  
+}

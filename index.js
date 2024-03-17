@@ -1,13 +1,4 @@
-// Créer un événement au click sur le hamburger menu pour sortir la sidebar, ranger la sidebar si on reclick dessus
 
-// Ranger la sidebar si on click sur le contenu principal
-
-
-// Aide
-// Priorités en CSS :important > id > classe > baliseHtml
-
-
-// })
 const sidebar = document.querySelector("#side-bar");
 
 
@@ -18,13 +9,11 @@ btn.addEventListener("click", () => {
 });
 
 // fermer si on touche le contenu
-const content = document.querySelector('.content')
+const content = document.querySelector('section');
 content.addEventListener("click", () => { 
     sidebar.classList.remove("active"); 
 })
 
-// BONUS
-// Créer en css l'hamburger menu qui se transforme en croix
 
 //cursor
 const cursor = document.querySelector('.cursor-perso');
@@ -99,3 +88,32 @@ const recurSiveFunction = () => {
   }, 60);
 };
 recurSiveFunction();
+
+// remote btn
+const remote = document.querySelector('.btn-remote')
+remote.addEventListener('click',handleRemote);
+
+
+function handleRemote () { 
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
+
+  
+  if (scrollY + windowHeight < documentHeight) {
+  
+    window.scrollTo({
+        top: scrollY + windowHeight,
+        left: 0,
+        behavior: "smooth" 
+    });
+} else {
+ 
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth" 
+    });
+}
+}
+

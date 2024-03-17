@@ -14,34 +14,36 @@
 </head>
 
 <body>
-  <header>
+<nav>
 
-    <nav id="side-bar">
-      <div class="toggle-btn" id="btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul>
-        <li>
-          <a href="#hero">Accueil</a>
-        </li>
-        <li>
-          <a href="#ap">Apropos</a>
-        </li>
-        <li>
-          <a href="#skills">Compétences</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#formations">formation</a>
-        </li>
-      </ul>
-     
-    </nav>
-  </header>
+  
+  <div id="side-bar" class="nav">
+    <div class="toggle-btn" id="btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <ul>
+      <li>
+        <a href="#hero">Accueil</a>
+      </li>
+      <li>
+        <a href="#ap">Apropos</a>
+      </li>
+      <li>
+        <a href="#skills">Compétences</a>
+      </li>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+      <li>
+        <a href="#formations">formation</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
   <div class="cursor-perso"></div>
   <section class="hero" id="hero">
     <div class="profil">
@@ -54,19 +56,27 @@
       </h1>
       <p class="hero_title">Developpeur front-end</p>
 
-      <div>
+      <div class="hero-languages">
         <h2>Languages:</h2>
         <h2 id="CiBle"> </h2>
       </div>
     </div>
 
 
-    <a href="#project" class="hero_btn-push" id="push">
+    <a href="#ap" class="hero_btn-push" id="push">
       <img src="images/down-arrow.svg" alt="fleche de bas">
     </a>
   </section>
 
   <main class="content">
+    <section class="apropos" id="ap">
+      <h2>Apropos</h2>
+      <p>Je suis un développeur front-end passionné par la création d'interfaces web. J'ai commencé à apprendre le
+        développement web en 2020 et depuis, je n'ai jamais arrêté d'apprendre. J'ai une passion pour le design et
+        l'expérience utilisateur, et j'aime créer des interfaces web qui sont à la fois belles et fonctionnelles. Je suis
+        toujours à la recherche de nouveaux défis et de nouvelles opportunités pour apprendre et grandir en tant que
+        développeur.</p>
+     </section>
     <!-- Compétences -->
     <section class="skills" id="skills">
       <h2> Compétences</h2>
@@ -191,7 +201,7 @@
 
         <div class="Formations_dev">
           <div class="Formations_dev-languages">
-            <h2>Front-end</h2>
+            <p>Front-end</p>
           </div>
           <div class="Formations_dev-languages-html">
             <h3>Compétences </h3>
@@ -264,7 +274,7 @@
           <div class="Formations_framework-frw">
 
 
-            <h2>Autres compétences</h2>
+            <p>Autres compétences</p>
           </div>
           <div class="Formations_framework-react">
             <h3>Compétences </h3>
@@ -307,14 +317,14 @@
       </div>
 
 
-
+ 
     </section>
     <!-- Contact -->
     <section class="contact">
       <div class="infos">
 
       </div>
-
+      <button class="btn-remote"><img src="./images/icons/downup.svg" alt=""></button>
     </section>
   </main>
   <footer>
@@ -345,17 +355,17 @@
       <div class="address">
         <div class="content">
 
-          <h4>adresse</h4>
-          <p>5 Allée gerges Plitzer</p>
+          <i class="fa-solid fa-location-dot"></i>
+          <p>5 Allée gerges Politzer</p>
           <p>92000 Nanterre</p>
         </div>
       </div>
 
       <div class="phone">
         <div class="content">
-          <h4>Téléphone</h4>
+          <i class="fa-solid fa-mobile"></i>
 
-          </p>
+          <p>
           0768638529
           </p>
 
@@ -363,7 +373,7 @@
       </div>
       <div class="email">
         <div class="content">
-          <h4>Email</h4>
+          <i class="fa-solid fa-envelope"></i>
 
           <a href="mailto:zarikader@gmail.com">Contact moi Ici</a>
 

@@ -62,12 +62,15 @@
   .hero_title {
     font-family: $font-1;
     color: $color-5;
-    font-size: clamp(16px, 2vw, 20px);
-    margin-top: 10px;
+    font-size: clamp(10px, 4vw, 30px);
+    margin-top: 20px;
     opacity: 0;
     transition: opacity 0.9s ease-out;
   }
-
+.hero-languages{
+  margin-top: 32px;
+ 
+}
   .active {
     opacity: 1;
 
@@ -75,6 +78,7 @@
   #CiBle {
      span{
       font-size: clamp(16px, 2vw, 20px);
+      color: $red;
      }
     position: relative;
     &::after {
@@ -115,6 +119,7 @@
     bottom: clamp(30px, 7.5vw, 75px);
     left: 50%;
     transform: translateX(-50%);
+    top: 84%;
     transition: opacity 0.3s ease-out;
     @media only screen and (max-width: 704px) {
       top: 70%;

@@ -1,13 +1,17 @@
 .skills {
   position: relative;
   margin-bottom: 2rem;
-  background: $color-4;
+  background: $color-1;
   width: 100vw;
   border-bottom: 2px saddlebrown solid;
   h2 {
     font-size: clamp(12px, 4vw, 28px);
     color: $color-1;
     padding: 1rem;
+    background: #000;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 4px;
    
   }
   .comp {
@@ -21,7 +25,7 @@
     h3 {
       font-size: clam(15px, 20vw, 20px);
       margin-bottom: 3rem;
-      color: $color-1;
+      color: $color-4;
     
     }
 
@@ -48,7 +52,7 @@
         h3 {
           text-align: center;
           font-size: clamp(8px, 4vw, 20px);
-          color: $color-4;
+          color: $color-1;
         }
 
         li {
@@ -60,7 +64,7 @@
           width: 100%;
           border-radius: 10px;
           //   max-width: 200px;
-          background: $color-1;
+          background: $color-4;
           box-shadow: 13px 12px 22px rgba(11, 9, 9, 0.6);
           height: 200px;
           transition: 0.2s ease-out;

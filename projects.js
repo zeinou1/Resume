@@ -96,11 +96,4 @@ const displayModal = (projectData) => {
 
 project();
 
-// ${
-//   projectData.images
-//     ? `
-//         <img src="${projectData.images[0]}" alt="project image" />
-//         <img src="${projectData.images[1]}" alt="project image" />
-//    `
-//     : ""
-// }
+

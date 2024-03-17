@@ -5,7 +5,7 @@ export const projectsData = [
     date: "janvier 2024",
     languages: ["React", "Sass"],
     infos: "Kasa est un site de location d’appartements entre particuliers, basé en France avec ses 500 annonces pastées par jour il vous permet de trouver votre bonheur en seulement quelques cliques .",
-    img: "../images/img-projects/kasa1.png",
+    img: "../images/img-projects/kasa2.webp",
     code:"https://github.com/zeinou1/KASA",
     link: "https://kasa-web.netlify.app/",
     images: ["../images/img-projects/kasa2.png", "../images/img-projects/kasa3.png"],

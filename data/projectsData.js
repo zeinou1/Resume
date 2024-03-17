@@ -8,7 +8,7 @@ export const projectsData = [
     img: "./images/img-projects/kasa2.webp",
     code:"https://github.com/zeinou1/KASA",
     link: "https://kasa-web.netlify.app/",
-    images: ["../images/img-projects/kasa2.png", "../images/img-projects/kasa3.png"],
+    images: ["./images/img-projects/kasa2.png", "./images/img-projects/kasa3.png"],
     competences: [
       "Base react",
       "Animation Css",
@@ -26,7 +26,7 @@ export const projectsData = [
     img: "../images/img-projects/Ohmy1.png",
     link: "https://zeinou1.github.io/ohmyfood_4/",
     code:"https://github.com/zeinou1/ohmyfood_4",
-    images: ["../images/img-projects/Ohmy2.png", "../images/img-projects/Ohmy1.png"],
+    images: ["./images/img-projects/Ohmy2.png", "./images/img-projects/Ohmy1.png"],
     competences: ["Base Css", "Animation Css", "Mobile first"],
   },
   {
@@ -35,10 +35,10 @@ export const projectsData = [
     date: "février 2024",
     languages: ["React", "Redux", "Sass","Api","Auth","Token"],
     infos: "ArgentBank est une application de gestion de compte bancaire, qui permet de faire des virements, consulter le solde de son compte, et de consulter l'historique de ses transactions.",
-    img: "../images/img-projects/argBank1.png",
+    img: "./images/img-projects/argBank1.png",
     // link: "http://www.google.com",
     code:"https://github.com/zeinou1/Bank-online/tree/Phase-Test",
-    images: ["../images/img-projects/argBank2.png", "../images/img-projects/argBank1.png"],
+    images: ["./images/img-projects/argBank2.png", "./images/img-projects/argBank1.png"],
     competences: ["Base Css", "Animation Css", "Mobile first"],
   },
   {
@@ -47,10 +47,10 @@ export const projectsData = [
     date: "mai 2023",
     languages: ["Javascript(vanilla)", "html", "Css","Api"],
     infos: "Sophie Blue est une site portofolio, qui permet de voir ses réalisations, de la contacter et de voir son parcours professionnel.",
-    img: "../images/img-projects/sophieBlue1.png",
+    img: "./images/img-projects/sophieBlue1.png",
     // link: "http://www.google.com",
     code:"https://github.com/zeinou1/Projet_N6_OPCR",
-    images: ["../images/img-projects/sophieBlue2.png", "../images/img-projects/SophieBlue3.png"],
+    images: ["./images/img-projects/sophieBlue2.png", "./images/img-projects/SophieBlue3.png"],
     competences: ["Base Css", "Animation Css", "Mobile first"],
   },
 ];

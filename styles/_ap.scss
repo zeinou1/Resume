@@ -1,5 +1,29 @@
 .apropos{
- height: 50vh;
- background: $color-1;
- color: black;
+
+ padding: 4rem;
+ color: $color-1;
+ background: $color-6;
+ margin: 3rem;
+ border-radius: 4px;
+ line-height: 32px;
+
+ h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $color-4;
+    font-size: clamp(12px, 4vw, 28px);
+    text-transform: uppercase;
+ }
+ p{
+    font-size: clamp(12px, 4vw, 20px);
+    color: $color-4;
+    text-align: center;
+    margin-bottom: 2rem;
+ }
+ strong{
+    font-size: clamp(12px, 4vw, 27px);
+    color: $color-4;
+    text-align: center;
+    margin-bottom: 2rem;
+ }
 }

@@ -1,9 +1,7 @@
 
 nav{
 
-#side-bar{
-  border-right: 3px solid blueviolet;
-}  
+ 
   .nav {
     position: fixed ;
     width: 270px;
@@ -78,9 +76,9 @@ nav{
   .active span:nth-child(3) {
     transform: rotate(45deg);
   }
-  .active ~ content{
-    opacity: 0.3;
-  }
+  // .active ~ content{
+  //   opacity: 0.3;
+  // }
   
   
 }

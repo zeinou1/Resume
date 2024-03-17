@@ -96,9 +96,6 @@ img {
      object-fit: cover;
 }
 
-nav #side-bar {
-  border-right: 3px solid blueviolet;
-}
 nav .nav {
   position: fixed;
   width: 270px;
@@ -165,9 +162,6 @@ nav .active span:nth-child(2) {
 }
 nav .active span:nth-child(3) {
   transform: rotate(45deg);
-}
-nav .active ~ content {
-  opacity: 0.3;
 }
 
 .hero {
@@ -952,7 +946,7 @@ footer {
   display: flex;
   position: relative;
   justify-content: space-between;
-  padding: 3rem;
+  padding: 1rem;
   z-index: -1;
 }
 @media only screen and (max-width: 700px) {
@@ -1079,7 +1073,29 @@ footer .contact-infos .email .content p {
 }
 
 .apropos {
-  height: 50vh;
-  background: #ffffff;
-  color: black;
+  padding: 4rem;
+  color: #ffffff;
+  background: #f5f5f5;
+  margin: 3rem;
+  border-radius: 4px;
+  line-height: 32px;
+}
+.apropos h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #05030c;
+  font-size: clamp(12px, 4vw, 28px);
+  text-transform: uppercase;
+}
+.apropos p {
+  font-size: clamp(12px, 4vw, 20px);
+  color: #05030c;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.apropos strong {
+  font-size: clamp(12px, 4vw, 27px);
+  color: #05030c;
+  text-align: center;
+  margin-bottom: 2rem;
 }/*# sourceMappingURL=index.css.map */

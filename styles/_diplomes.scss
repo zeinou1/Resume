@@ -43,7 +43,13 @@
       font-size: clamp(12px, 3vw, 24px);
       color: $color-4;
       margin-top: .3rem;
+      position: relative;
+     
     }
+
+ 
+
+
   }
   .parcours {
     h3{
@@ -338,4 +344,33 @@
   p{
     color: $color-4;
   }
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 175px;
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    max-width: 8px;
+    background-color: red;
+    // animation: Circle 26s infinite  ;
+  }
+  // @keyframes Circle {
+  //   0%{
+  //     top: 5%;
+  //     transform: rotate(0);
+  //   }
+  //   10% {
+  //     top: 22%;
+  //     transform: rotate(0);
+  //   }
+  //   20% {
+  //     left: 40%;
+  //     transform: rotate(0);
+  //   }
+ 
+   
+  // }
 }

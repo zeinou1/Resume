@@ -4,11 +4,11 @@ nav{
  
   .nav {
     position: fixed ;
-    width: 270px;
+    width: 204px;
     height: 100vh;
-    background: $color-1;
+    background: $color-4;
     top: 0;
-    left: -270px;
+    left: -204px;
     transition: 0.5s ease-out;
     z-index: 4;
   
@@ -16,7 +16,7 @@ nav{
   .toggle-btn {
     position: absolute;
     top: 30px;
-    left: 278px;
+    left: 215px;
     cursor: pointer;
     height: 50px;
     width: 50px;
@@ -45,16 +45,17 @@ nav{
     color: $color-1;
     text-transform: capitalize;
     a{
-      color: $color-4;
+      color: $color-1;
       text-decoration: none;
-    
     }
     a:hover {
-      color: $color-1;}
+      color: $color-1;
+      
+    }
   }
   li:hover {
-    background: $color-4;
-   
+    background: $color-2;
+    color: $color-1;
   }
 
   .nav.active {

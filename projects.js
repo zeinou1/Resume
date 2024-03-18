@@ -11,7 +11,7 @@ const project = () => {
     const displayInfos = document.createElement("span");
      const displayAllP = document.createElement("div");
 
-     // Gestion du projet niveau
+     // Gestion du projet 
     divProjects.innerHTML = `
     
     <span class="infos_display">
@@ -40,6 +40,7 @@ const project = () => {
   });
 };
 
+// Modal
 const displayModal = (projectData) => {
   const modal = document.createElement("div");
   modal.className = "modal";
@@ -51,13 +52,11 @@ const displayModal = (projectData) => {
         .map(
           (image) =>
             `
-        
          <img src='${image}' alt = ""
          <img src="${image}" alt = "project image" />
          `
         )
         .join("")}
-
 
       </div>
        <div class="modal-info"> 
@@ -79,8 +78,6 @@ const displayModal = (projectData) => {
 
         projectData.link ? `  <button><a href=${projectData.link} target='blank'>Voir le site</a></button>` : ""
        }
-
-
       <button><a href=${projectData.code}>Voir le code</a></button>
       </div>
 

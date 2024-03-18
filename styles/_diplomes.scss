@@ -106,7 +106,7 @@
         opacity: 0.3;
       }
       &-html {
-        border: 2px solid rgb(15, 12, 1);
+        border: 2px solid $color-5;
         box-shadow: 12px 0 ;
         position: relative;
         max-width: 300px;
@@ -127,7 +127,7 @@
         }
       }
       &-css {
-        border: 2px solid gray;
+        border: 2px solid rgb(188, 156, 40);
         box-shadow: 12px 0 ;
         position: relative;
         max-width: 300px;
@@ -138,6 +138,7 @@
         font-size: 14px;
         line-height: 1.8;
         background-color: $color-4;
+      
         img {
           width: 100%;
           max-width: 42px;
@@ -237,7 +238,7 @@
       @media only screen and (max-width: 700px) {
         display: none !important;
       }
-      @media only screen and (min-width: 704px) and (max-width: 1024px) {
+      @media only screen and (min-width: 604px) and (max-width: 1024px) {
       }
       &::before {
         content: "";

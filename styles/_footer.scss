@@ -1,13 +1,16 @@
 footer {
   background: #000;
   width: 100%;
-  // display: flex;
+   display: flex;
   position: relative;
-  justify-content: space-between;
+  // justify-content: space-between;
+  flex-direction: column;
+ justify-content: center;
   padding: 1rem;
   z-index: -1;
   @media only screen and (max-width: 700px) {
-    flex-direction: column;
+
+    justify-content: center;
   }
   @media only screen and (min-width: 704px) and (max-width: 1024px) {
   }
@@ -33,11 +36,10 @@ footer {
   }
   // contact
   .contact-infos {
-    width: 100%;
+   
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  gap: 1rem;
+    gap: 1rem;
     padding: 0 5rem;
     @media only screen and (max-width: 700px) {
       flex-direction: column;
@@ -55,7 +57,8 @@ footer {
     }
 
     .address {
-      width: 320px;
+     width: 100%;
+      max-width: 320px;
       margin: 0 auto;
       background: $color-1;
       border-radius: 3px;
@@ -83,7 +86,8 @@ footer {
       }
     }
     .phone {
-      width: 320px;
+   width: 100%;
+      max-width: 320px;
       margin: 0 auto;
       background: $color-1;
       border-radius: 3px;
@@ -114,7 +118,8 @@ footer {
       }
     }
     .email {
-      width: 320px;
+      width: 100%;
+      max-width: 320px;
       margin: 0 auto;
       background: $color-1;
       border-radius: 3px;
@@ -125,8 +130,8 @@ footer {
         flex-direction: column;
      
         @media only screen and (max-width: 700px) {
-        
-          justify-content: space-around;
+        justify-content: space-around;
+    
         }
         @media only screen and (min-width: 704px) and (max-width: 1024px) {
         }

@@ -44,7 +44,19 @@
       color: $color-4;
       margin-top: .3rem;
       position: relative;
-     
+      &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0px;
+        width: 100%;
+        margin: 0 auto;
+        height: 50px;
+        max-width: 8px;
+        background-color: rgb(243, 45, 5);
+        animation: Circle 3s infinite  ease-out ;
+      }
     }
 
  
@@ -52,6 +64,7 @@
 
   }
   .parcours {
+    
     h3{
       font-size: clamp(13px, 3vw, 20px);
       text-align: center;
@@ -85,6 +98,19 @@
       @media only screen and (min-width: 704px) and (max-width: 1024px) {
       
       }
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0px;
+      width: 100%;
+      margin: 0 auto;
+      height: 8px;
+      max-width: 50px;
+      background-color: $color-4;
+      animation: Circle2 3s infinite  linear ;
     }
   }
   &_dev {
@@ -344,33 +370,38 @@
   p{
     color: $color-4;
   }
-  &::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 175px;
-    width: 100%;
-    margin: 0 auto;
-    height: 50px;
-    max-width: 8px;
-    background-color: red;
-    // animation: Circle 26s infinite  ;
-  }
-  // @keyframes Circle {
-  //   0%{
-  //     top: 5%;
-  //     transform: rotate(0);
-  //   }
-  //   10% {
-  //     top: 22%;
-  //     transform: rotate(0);
-  //   }
-  //   20% {
-  //     left: 40%;
-  //     transform: rotate(0);
-  //   }
+  
+  @keyframes Circle {
+    0%{
+      
+      transform: translateY(65px);
+    }
+    10% {
+      top: 22%;
+      transform:translateY(-130px);
+    }
+    100% {
+     
+      transform: translateY(0);
+    }
  
    
-  // }
+  }
+
+  @keyframes Circle2 {
+    0% {
+      left: -45%;
+      transform: translateY(0);
+    }
+    10% {
+      left: 45%;
+      transform: translateY(0);
+    }
+    100% {
+      lef: 50%;
+      transform: translateY(0);
+    }
+  }
+  
+  
 }

@@ -725,6 +725,19 @@ nav .active span:nth-child(3) {
   margin-top: 0.3rem;
   position: relative;
 }
+.Formations_infos p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0px;
+  width: 100%;
+  margin: 0 auto;
+  height: 50px;
+  max-width: 8px;
+  background-color: rgb(243, 45, 5);
+  animation: Circle 3s infinite ease-out;
+}
 .Formations .parcours {
   position: relative;
   display: flex;
@@ -754,6 +767,19 @@ nav .active span:nth-child(3) {
   background-color: #05030c;
   opacity: 0.3;
   z-index: 100;
+}
+.Formations .parcours::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0px;
+  width: 100%;
+  margin: 0 auto;
+  height: 8px;
+  max-width: 50px;
+  background-color: #05030c;
+  animation: Circle2 3s infinite linear;
 }
 .Formations_dev {
   width: 50%;
@@ -997,17 +1023,31 @@ nav .active span:nth-child(3) {
 .Formations p {
   color: #05030c;
 }
-.Formations::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 175px;
-  width: 100%;
-  margin: 0 auto;
-  height: 50px;
-  max-width: 8px;
-  background-color: red;
+@keyframes Circle {
+  0% {
+    transform: translateY(65px);
+  }
+  10% {
+    top: 22%;
+    transform: translateY(-130px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes Circle2 {
+  0% {
+    left: -45%;
+    transform: translateY(0);
+  }
+  10% {
+    left: 45%;
+    transform: translateY(0);
+  }
+  100% {
+    lef: 50%;
+    transform: translateY(0);
+  }
 }
 
 footer {

@@ -22,6 +22,7 @@
     max-width: 300px;
     text-transform: capitalize;
     border-radius: 4px;
+    margin-bottom: 32px;
    
   }
   .allprojects {
@@ -43,6 +44,7 @@
     span:hover {
       visibility: visible;
       transform: translateY(0);
+      // border: 2px solid $color-1;
     }
     :nth-child(2) {
       border-radius: 13px;
@@ -53,11 +55,12 @@
       .infos_display:hover {
         transform: scale(1.01);
         filter: opacity(15%) contrast(150%);
+    
       }
       img {
         width: 100%;
         height: 100%;
-        border: 3px solid white;
+        border: 3px solid rgb(234, 7, 7);
         transition: 0.2s ease-out;
       }
     }
@@ -138,6 +141,8 @@
     background-color: $color-4;
     margin: 1rem;
     border-radius: 7px;
+    padding: 12px;
+    border: 2px solid $color-1;
     z-index: 111111111111;
     img {
       object-fit: cover;
@@ -208,9 +213,11 @@
     button {
       padding: 1rem;
       margin: 0.5rem;
-      background: $color-5;
+      background: $color-1;
       color: $color-1;
       font-size: 22px;
+      border-radius: 5px;
+      border: 3px solid $color-5;
       @media only screen and (max-width: 480px) {
       
           font-size: 18px;

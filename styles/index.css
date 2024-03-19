@@ -393,6 +393,7 @@ nav .active ~ section {
   max-width: 300px;
   text-transform: capitalize;
   border-radius: 4px;
+  margin-bottom: 32px;
 }
 .projects .allprojects {
   position: relative;
@@ -431,7 +432,7 @@ nav .active ~ section {
 .projects .allprojects :nth-child(2) img {
   width: 100%;
   height: 100%;
-  border: 3px solid white;
+  border: 3px solid rgb(234, 7, 7);
   transition: 0.2s ease-out;
 }
 .projects .allprojects .span_display {
@@ -507,6 +508,8 @@ nav .active ~ section {
   background-color: #05030c;
   margin: 1rem;
   border-radius: 7px;
+  padding: 12px;
+  border: 2px solid #ffffff;
   z-index: 111111111111;
 }
 .projects .modal-content img {
@@ -562,9 +565,11 @@ nav .active ~ section {
 .projects .modal-content button {
   padding: 1rem;
   margin: 0.5rem;
-  background: #a1528c;
+  background: #ffffff;
   color: #ffffff;
   font-size: 22px;
+  border-radius: 5px;
+  border: 3px solid #a1528c;
 }
 @media only screen and (max-width: 480px) {
   .projects .modal-content button {

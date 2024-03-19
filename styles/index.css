@@ -510,7 +510,7 @@ nav .active ~ section {
   border-radius: 7px;
   padding: 12px;
   border: 2px solid #ffffff;
-  z-index: 111111111111;
+  z-index: -111111111111;
 }
 .projects .modal-content img {
   -o-object-fit: cover;
@@ -563,13 +563,15 @@ nav .active ~ section {
   }
 }
 .projects .modal-content button {
+  position: relative;
+  z-index: 1;
   padding: 1rem;
   margin: 0.5rem;
-  background: #ffffff;
+  background: #f5f5f5;
   color: #ffffff;
   font-size: 22px;
   border-radius: 5px;
-  border: 3px solid #a1528c;
+  border: 3px solid #ffffff;
 }
 @media only screen and (max-width: 480px) {
   .projects .modal-content button {
@@ -582,6 +584,26 @@ nav .active ~ section {
     padding: 0.5rem;
     font-size: 20px;
   }
+}
+.projects .modal-content button a:visited {
+  color: #525ba1;
+}
+.projects .modal-content button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #05030c;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: transform 0.4s ease-out;
+}
+.projects .modal-content button:hover::after {
+  transform: translateX(100%);
+}
+.projects .modal-content button:hover {
+  color: black;
 }
 .projects .close {
   position: absolute;

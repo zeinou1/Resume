@@ -52,8 +52,7 @@ const displayModal = (projectData) => {
         .map(
           (image) =>
             `
-         <img src='${image}' alt = ""
-         <img src="${image}" alt = "project image" />
+        <img src='${image}' alt = '${projectData.title}' />
          `
         )
         .join("")}
@@ -78,7 +77,7 @@ const displayModal = (projectData) => {
 
         projectData.link ? `  <button><a href=${projectData.link} target='blank'>Voir le site</a></button>` : ""
        }
-      <button><a href=${projectData.code}>Voir le code</a></button>
+      <button><a href=${projectData.code} target="_blank">Voir le code</a></button>
       </div>
 
     </div>

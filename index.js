@@ -9,7 +9,7 @@ btn.addEventListener("click", () => {
 });
 
 // fermer si on touche le contenu
-const content = document.querySelector('section');
+const content = document.querySelector('.content');
 content.addEventListener("click", () => { 
     sidebar.classList.remove("active"); 
 })

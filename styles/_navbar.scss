@@ -1,9 +1,6 @@
-
-nav{
-
- 
+nav {
   .nav {
-    position: fixed ;
+    position: fixed;
     width: 204px;
     height: 100vh;
     background: $color-4;
@@ -11,7 +8,6 @@ nav{
     left: -204px;
     transition: 0.5s ease-out;
     z-index: 4;
-  
   }
   .toggle-btn {
     position: absolute;
@@ -44,13 +40,12 @@ nav{
     padding: 13px;
     color: $color-1;
     text-transform: capitalize;
-    a{
+    a {
       color: $color-1;
       text-decoration: none;
     }
     a:hover {
       color: $color-1;
-      
     }
   }
   li:hover {
@@ -61,9 +56,7 @@ nav{
   .nav.active {
     left: 0;
   }
-  
- 
-  
+
   .active span {
     position: absolute;
   }
@@ -77,9 +70,7 @@ nav{
   .active span:nth-child(3) {
     transform: rotate(45deg);
   }
-  // .active ~ content{
-  //   opacity: 0.3;
-  // }
-  
-  
+  .active ~ section {
+    opacity: 0.3;
+  }
 }

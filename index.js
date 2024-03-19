@@ -52,7 +52,7 @@ setTimeout(() => {
 
 //anime langues
 const target = document.getElementById("CiBle");
-let langues = ["Html", "Css", "Javascript","React","Sass"];
+let langues = ["React", "Css", "Javascript","Html","Sass"];
 let IndexMots = 0;
 let IndexLetter = 0;
 

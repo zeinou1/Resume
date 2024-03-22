@@ -627,38 +627,6 @@ nav .active ~ section {
     opacity: 1;
   }
 }
-.competence-0 {
-  animation-delay: 0s;
-}
-
-.competence-1 {
-  animation-delay: 0.3333333333s;
-}
-
-.competence-2 {
-  animation-delay: 0.6666666667s;
-}
-
-.competence-3 {
-  animation-delay: 1s;
-}
-
-.competence-4 {
-  animation-delay: 1.3333333333s;
-}
-
-.competence-5 {
-  animation-delay: 1.6666666667s;
-}
-
-.competence-6 {
-  animation-delay: 2s;
-}
-
-.competence-7 {
-  animation-delay: 2.3333333333s;
-}
-
 .skills {
   position: relative;
   margin-bottom: 2rem;
@@ -1120,6 +1088,97 @@ nav .active ~ section {
     lef: 50%;
     transform: translateY(0);
   }
+}
+
+.contact {
+  background: #05030c;
+  min-height: 640px;
+  width: 92%;
+  margin: 0 auto 76px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+@media screen and (max-width: 900px) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+.contact form {
+  display: grid;
+  gap: 18px;
+  padding: 60px 50px;
+  grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
+}
+.contact form label {
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.7rem;
+  color: #ffffff;
+}
+.contact form input[type=text],
+.contact form textarea {
+  background: none;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  resize: none;
+  color: #ffffff;
+}
+.contact form .submit-container {
+  display: flex;
+  align-items: flex-end;
+}
+.contact form .submit-container .btn {
+  color: #05030c;
+  border: 2px solid #ffffff;
+  padding: 12px;
+}
+.contact .infos-contact {
+  border-left: 1px solid #f5f5f5;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+@media screen and (max-width: 900px) {
+  .contact .infos-contact div:nth-child(1) {
+    border-top: 1px solid #ffffff;
+    padding-bottom: 20px;
+  }
+}
+.contact .infos-contact div {
+  border-bottom: 1px solid #f5f5f5;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .contact .infos-contact div {
+    grid-template-columns: 45% 55%;
+  }
+}
+.contact .infos-contact div h3 {
+  font-size: 0.7rem;
+  padding-left: 40px;
+  text-align: left;
+  color: #ffffff;
+}
+.contact .infos-contact div p {
+  font-size: 0.8rem;
+  line-height: 26px;
+  text-align: left;
+  color: #ffffff;
+}
+.contact .infos-contact .social ul {
+  display: flex;
+}
+.contact .infos-contact .social ul li {
+  border: 1px solid #ffffff;
+  border-radius: 150px;
+  height: 40px;
+  width: 40px;
+  font-size: 0.9rem;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {

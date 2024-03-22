@@ -10,11 +10,11 @@
   }
   
 }
-@for $i from 0 to 8 {
-  .competence-#{$i} {
-    animation-delay: 3s * $i / 9;
-  }
-}
+// @for $i from 0 to 8 {
+//   .competence-#{$i} {
+//     animation-delay: 3s * $i / 9;
+//   }
+// }
 
 .skills {
   position: relative;

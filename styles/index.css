@@ -390,7 +390,7 @@ nav .active ~ section {
   padding: 1rem;
   background: #ffffff;
   width: 100%;
-  max-width: 300px;
+  max-width: 1120px;
   text-transform: capitalize;
   border-radius: 4px;
   margin-bottom: 32px;
@@ -615,6 +615,48 @@ nav .active ~ section {
   color: red;
   width: 23px;
   height: 23px;
+}
+
+@keyframes enterComp {
+  from {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.competence-0 {
+  animation-delay: 0s;
+}
+
+.competence-1 {
+  animation-delay: 0.3333333333s;
+}
+
+.competence-2 {
+  animation-delay: 0.6666666667s;
+}
+
+.competence-3 {
+  animation-delay: 1s;
+}
+
+.competence-4 {
+  animation-delay: 1.3333333333s;
+}
+
+.competence-5 {
+  animation-delay: 1.6666666667s;
+}
+
+.competence-6 {
+  animation-delay: 2s;
+}
+
+.competence-7 {
+  animation-delay: 2.3333333333s;
 }
 
 .skills {

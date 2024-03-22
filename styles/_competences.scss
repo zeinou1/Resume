@@ -1,9 +1,28 @@
+@keyframes enterComp {
+  from {
+    transform: translateY(-2rem); 
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+}
+@for $i from 0 to 8 {
+  .competence-#{$i} {
+    animation-delay: 3s * $i / 9;
+  }
+}
+
 .skills {
   position: relative;
   margin-bottom: 2rem;
   background: $color-1;
   width: 100vw;
   border-bottom: 2px saddlebrown solid;
+
   h2 {
     font-size: clamp(12px, 4vw, 28px);
     color: $color-1;
@@ -68,10 +87,12 @@
           box-shadow: 13px 12px 22px rgba(11, 9, 9, 0.6);
           height: 200px;
           transition: 0.2s ease-out;
+          // transform: scale(0);
+
+          
+
           @media only screen and (max-width: 700px) {
             width: 100%;
-           
-          
           }
           img {
             width: 40%;
@@ -84,5 +105,12 @@
         }
       }
     }
+  
+    
   }
+
+// .lang{
+//   animation: enterComp 1000ms ease-in-out forwards;
+// }
+
 }

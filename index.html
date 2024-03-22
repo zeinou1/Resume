@@ -359,64 +359,63 @@ Mohamed Zeinoudini, Développer front-end, Languages
       <button class="btn-remote"><img src="./images/icons/downup.svg" alt=""></button>
     </section>
   </main>
-
-  <footer>
-    <div class="social-network">
-      <ul class="content">
-        <a href="www.facebook.com" target="_blank" rel="noopener noreferrer">
-          <li>
-            <i class="fab fa-facebook-f"></i>
-          </li>
-        </a>
-
-        <a href="www.twitter.com" target="_blank" rel="noopener noreferrer">
-          <li>
-            <i class="fab fa-twitter"></i>
-          </li>
-        </a>
-
-        <a href="www.facebook.com" target="_blank" rel="noopener noreferrer">
-          <li>
-            <i class="fab fa-instagram"></i>
-          </li>
-        </a>
-      </ul>
+ <!-- Contact -->
+ <section class="contact">
+  <form id="contact-form">
+    <label for="name">name</label>
+    <input type="text" id="name" autocomplete="off" name="name">
+    <label for="email">email</label>
+    <input type="text" id="email" name="email">
+    <label for="message">message</label>
+    <textarea id="message" name="message"></textarea>
+    <div class="submit-container">
+      <button type="submit" class="btn">Envoyé un message </button>
     </div>
-
-
-    <div class="contact-infos">
-      <div class="address">
-        <div class="content">
-
-          <i class="fa-solid fa-location-dot"></i>
-          <p>5 Allée gerges Politzer</p>
-          <p>92000 Nanterre</p>
-        </div>
-      </div>
-
-      <div class="phone">
-        <div class="content">
-          <i class="fa-solid fa-mobile"></i>
-
-          <p>
-            0768638529
-          </p>
-
-        </div>
-      </div>
-      <div class="email">
-        <div class="content">
-          <i class="fa-solid fa-envelope"></i>
-
-          <a href="mailto:zarikader@gmail.com">Contact moi ici :</a>
-
-
-        </div>
-      </div>
+    <div ><span class="msg" id="msg" ></span></div>
+  </form>
+  <div class="infos-contact">
+    <div>
+      <h3>address</h3>
+      <p><br>5 allée gerges politzer<br>92000, Nanterre</p>
     </div>
+    <div>
+      <h3>phone</h3>
+      <p>07-68-63-85-29</p>
+    </div>
+    <div>
+      <h3>email</h3>
+      <p>zarikader@gmail.com</p>
+    </div>
+   
+  </div>
+  <button class="btn-remote"><img src="./images/icons/downup.svg" alt=""></button>
+</section>
+</main>
 
+<footer>
+<div class="social-network">
+  <ul class="content">
+    <a href="www.facebook.com" target="_blank" rel="noopener noreferrer">
+      <li>
+        <i class="fab fa-facebook-f"></i>
+      </li>
+    </a>
 
-  </footer>
+    <a href="www.twitter.com" target="_blank" rel="noopener noreferrer">
+      <li>
+        <i class="fab fa-twitter"></i>
+      </li>
+    </a>
+
+    <a href="www.facebook.com" target="_blank" rel="noopener noreferrer">
+      <li>
+        <i class="fab fa-instagram"></i>
+      </li>
+    </a>
+  </ul>
+</div>
+</footer>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="index.js"></script>
   <script type="module" src="projects.js"></script>
 </body>

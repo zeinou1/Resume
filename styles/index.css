@@ -112,6 +112,10 @@ img {
      object-fit: cover;
 }
 
+.msg {
+  color: rgb(67, 234, 67);
+}
+
 nav .nav {
   position: fixed;
   width: 204px;
@@ -1131,6 +1135,7 @@ nav .active ~ section {
   color: #05030c;
   border: 2px solid #ffffff;
   padding: 12px;
+  cursor: pointer;
 }
 .contact .infos-contact {
   border-left: 1px solid #f5f5f5;

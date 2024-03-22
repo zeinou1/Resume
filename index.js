@@ -1,65 +1,84 @@
+const remote = document.querySelector(".btn-remote");
+remote.addEventListener("click", handleRemote);
 
+
+
+
+function handleRemote () { 
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
+
+  
+  if (scrollY + windowHeight < documentHeight) {
+  
+    window.scrollTo({
+        top: scrollY + windowHeight,
+        left: 0,
+        behavior: "smooth" 
+    });
+} else {
+ 
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth" 
+    });
+}
+}
+//end remote
 const sidebar = document.querySelector("#side-bar");
 
-
-btn.addEventListener("click", () => { 
-    
-    sidebar.classList.toggle("active");
-    
+btn.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
 });
 
 // fermer si on touche le contenu
-const content = document.querySelector('.content');
-content.addEventListener("click", () => { 
-    sidebar.classList.remove("active"); 
-})
-
+const content = document.querySelector(".content");
+content.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+});
 
 //cursor
-const cursor = document.querySelector('.cursor-perso');
-window.addEventListener("mousemove", HandleCursorMove)
-function HandleCursorMove (e) {
-    cursor.style.transform  = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`
+const cursor = document.querySelector(".cursor-perso");
+window.addEventListener("mousemove", HandleCursorMove);
+function HandleCursorMove(e) {
+  cursor.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
 }
 // anime Nom
 
-const title = document.querySelector('h1')
-const subtitle = document.querySelector('.hero_title')
-const apropos = document.querySelector('.hero_btn-push')
-const arrow = document.querySelector('.hero_btn-push')
-const txt = "Mohamed zeinoudini"
+const title = document.querySelector("h1");
+const subtitle = document.querySelector(".hero_title");
+const apropos = document.querySelector(".hero_btn-push");
+const arrow = document.querySelector(".hero_btn-push");
+const txt = "Mohamed zeinoudini";
 
-function textAnime (text,index) {
-    if(index > 3) subtitle.classList.add('active')
-    if(index > 6) arrow.classList.add('active')
+function textAnime(text, index) {
+  if (index > 3) subtitle.classList.add("active");
+  if (index > 6) arrow.classList.add("active");
 
-    if(index < text.length) {
-
-        setTimeout(() => { 
-            title.innerHTML += `${text[index]}`;
-           setTimeout(() => { 
-            
-            textAnime(text,index +1)
-           },190)
-        },15)
-       
-
-    }
+  if (index < text.length) {
+    setTimeout(() => {
+      title.innerHTML += `${text[index]}`;
+      setTimeout(() => {
+        textAnime(text, index + 1);
+      }, 190);
+    }, 15);
+  }
 }
 setTimeout(() => {
-    textAnime(txt,0)
-},300)
+  textAnime(txt, 0);
+}, 300);
 
 //anime langues
 const target = document.getElementById("CiBle");
-let langues = ["React", "Css", "Javascript","Html","Sass"];
+let langues = ["React", "Css", "Javascript", "Html", "Sass"];
 let IndexMots = 0;
 let IndexLetter = 0;
 
 const createLetter = () => {
   const letter = document.createElement("span");
   target.appendChild(letter);
-
 
   letter.textContent = langues[IndexMots][IndexLetter];
 
@@ -89,31 +108,26 @@ const recurSiveFunction = () => {
 };
 recurSiveFunction();
 
+/// emailjs
+
+const msg = document.getElementById("msg");
+emailjs.init("ilnxI860tJQhFnJDX");
+
+function sendEmail(event) {
+  event.preventDefault();
+
+  emailjs.sendForm("service_wapts3i", "template_8o6ycqd", "contact-form").then(
+    function (response) {
+      console.log("Email envoyé avec succes:", response);
+      // alert('Email envoyé avec succes');
+      msg.textContent = "Email envoyé avec succès";
+    },
+    function (error) {
+      console.error("Email sending failed:", error);
+      alert("Email sending failed. Please try again later.");
+    }
+  );
+}
+document.getElementById("contact-form").addEventListener("submit", sendEmail);
+
 // remote btn
-const remote = document.querySelector('.btn-remote')
-remote.addEventListener('click',handleRemote);
-
-
-function handleRemote () { 
-  const scrollY = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const documentHeight = document.documentElement.scrollHeight;
-
-  
-  if (scrollY + windowHeight < documentHeight) {
-  
-    window.scrollTo({
-        top: scrollY + windowHeight,
-        left: 0,
-        behavior: "smooth" 
-    });
-} else {
- 
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth" 
-    });
-}
-}
-
